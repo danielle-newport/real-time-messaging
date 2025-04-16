@@ -1,0 +1,28 @@
+{
+  "name": "real-time-messaging",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/app.js",
+    "dev": "ts-node src/app.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/node": "^22.14.1",
+    "@types/socket.io": "^3.0.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "node": "^23.11.0",
+    "socket.io": "^4.8.1",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21"
+  }
+}
