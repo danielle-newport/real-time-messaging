@@ -22,17 +22,17 @@ const io = new Server(server, {
   }
 });
 
-// REST API
+// REST API (mock db call for previous messages)
 app.get("/api/messages", (req: Request, res: Response) => {
-  res.json({ message: "Hello TypeScript!" });
+  res.json({ message: "Welcome!" });
 });
 
 // Socket.io Events
 io.on("connection", (socket) => {
   console.log("New client connected");
 
-  socket.on("chatMessage", (msg: string) => {
-    io.emit("newMessage", msg); // Broadcast to all clients
+  socket.on("new_message", (msg: string) => {
+    io.emit("new_message", msg); // Broadcast to all clients
   });
 
   socket.on("disconnect", () => {
